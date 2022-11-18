@@ -13,3 +13,23 @@ def pe():
       global nmn
       global mn
       global cur
+      if p =='3':
+            m = input('Enter name')
+            nm = int(input('Enter price'))
+            nmn = int(input('Enter number'))
+            print('OK it is create')
+            cur.execute(f'INSERT INTO products (name, price, number) VALUES ("{m}" , "{nm}" , "{nmn}")')
+            connection.commit()
+      if p =='2':
+            mn = input('Enter row id')
+            cur.execute(f'DELETE FROM products WHERE rowid = {m}')
+            connection.commit()
+      if p == '1':
+            print(res)
+
+cur.execute('SELECT rowid, name, price, number FROM products')
+connection.commit()
+res = cur.fetchall()
+pe()
+
+connection.close()

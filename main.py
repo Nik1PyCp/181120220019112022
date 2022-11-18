@@ -7,3 +7,9 @@ cur = connection.cursor()
 #cur.execute('CREATE TABLE products (name TEXT, price TEXT, number TEXT)')
 #connection.commit()
 
+def pe():
+      global m
+      global nm
+      global nmn
+      global mn
+      global cur
